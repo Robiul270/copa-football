@@ -27,19 +27,21 @@ ul li a{
     font-size: 20px;
 }
 .fa-sign-in-alt{
-    color: #000;
+    color: rgb(17, 14, 14);
 }
 /* ---------------------
    Header Section
 ---------------------- */
 header{
-    background: linear-gradient(to right, #400c6e, #4a00e0);
+    /* background: linear-gradient(to right, #400c6e, #4a00e0); */
+    background-image: url(img/img8.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.Two-story-box{   
+.two-story-box{   
     height: 600px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 0;
 }
 
 .left-side{
@@ -53,18 +55,19 @@ header{
 }
 .left-side h1{
     font-size: 60px;
-    color: rgb(255, 149, 171);
+    color: rgb(255, 86, 120);
     font-family: Ubuntu,Arial,sans-serif;
     letter-spacing: 2px
 } 
 button{
-    background-color: rgb(252, 64, 101);
+    background-color: rgb(161, 143, 147);
     padding: 12px 20px ;
     color: #fff;
     font-size: 18px;
     border-radius: 15px 0;
     font-family: Ubuntu,Arial,sans-serif;
     letter-spacing: 2px;
+    border: 1px solid #fff;
 }
 .right-side img{
     width: 75%;
@@ -76,19 +79,19 @@ button{
 ------------------------- */
 main{
     background-color:#fff;
-    margin: 40px 0;
+    margin-top: -50px;
 }
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;    
+    flex-direction: column;
+    margin-top: 80px;    
 }
 h2{
     font-size: 40px;
     font-family: Ubuntu,Arial,sans-serif;
     color: rgb(105, 94, 119);
-    margin: 0;
 }
 
 .players{
@@ -97,7 +100,6 @@ h2{
     grid-column-gap: 40px;
     grid-row-gap: 60px;
     background-color: rgba(187, 187, 187, 0.048);  
-    margin-top: 50px; 
 }
 .player{
     width: 320px;
@@ -122,30 +124,44 @@ h2{
     color: gray;
 }
 
-
 /* Gallery Images */
+
 .gallery-area{
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    overflow: hidden;
+    transition: 0.3s;
 }
 .gallery{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 40px;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
 }
 
 .gallery-img{
     width: 300px;
-    height: -1px;
+   position: relative;
+    overflow: hidden;
 }
 .gallery-img img{
-    width: 100%;
+    width: 100%; 
 }
-
+/* -------------------
+    Sponsor Section 
+----------------------*/
+.sponsor-heading h3{
+    font-size: 30px;
+    
+}
+.sponsor-img img{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+/*------------------------ 
+   Footer Section    
+--------------------------*/
 footer{
     display: flex;
     justify-content: center;
@@ -158,37 +174,54 @@ footer{
     width: 100%;
 }
 .social-icons{
-    color: rgb(95, 94, 94);
+    color: rgb(155, 150, 150);
     font-size: 25px;
     text-align: center;
-    font-weight: bold;
     letter-spacing: 10px;
     margin-top: 20px;
 }
 .last-text{
     text-align: center;
 }
-/* Special Effects */
-.right-side{
+/*-------------------- 
+  Special Effects 
+----------------------*/
+#transform{
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.5s;transform-origin: center;
 }
-.right-side:hover{
-    z-index: 1;
-    transform: scale(1.10);
-    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+#transform:hover{
+    transform: perspective(800px) rotateY(-60deg);
+    
 }
 .player:hover{
-    z-index: 1;
     transform: scale(1.10);
     box-shadow: 0 25px 40px rgba(0,0,0,.5);
 }
-.gallery{
+.gallery-img{
     overflow: hidden;
-    transition: 0.7s;
+    transition: .7s;
 }
 .gallery-img:hover{
-    z-index: 1;
     transform: scale(1.10);
-    box-shadow: 0 25px 40px rgba(0,0,0,.5);
 }
+/* ---------------------
+    Responseve Area
+------------------------ */
+
+/*----------------Mobile Devices---------- */
+@media screen and (max-width: 687px)  {
+
+    .players, .gallery, .two-story-box{
+        grid-template-columns: repeat(1, 1fr);   
+    }
+}
+/*-----------------Tablets and ipads---------- */
+
+@media screen and (min-width: 688px) and (max-width: 992px) {
+    .players, .gallery, .two-story-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+      
+}
+
