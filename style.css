@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
+body{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/*---------------------------------
+ Navigation Section Stylesheet
+----------------------------------- */
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+.nav-items ul{
+    display: flex;
+    margin-bottom: 0;
+}
+ul li{  
+    list-style: none;
+    margin-right: 30px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+.fa-sign-in-alt{
+    color: #000;
+}
+/* ---------------------
+   Header Section
+---------------------- */
+header{
+    background: linear-gradient(to right, #400c6e, #4a00e0);
+}
+.Two-story-box{   
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 0;
+}
+
+.left-side{
+    margin-left: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-side-info{
+    margin-left: 15%;
+}
+.left-side h1{
+    font-size: 60px;
+    color: rgb(255, 149, 171);
+    font-family: Ubuntu,Arial,sans-serif;
+    letter-spacing: 2px
+} 
+button{
+    background-color: rgb(252, 64, 101);
+    padding: 12px 20px ;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 15px 0;
+    font-family: Ubuntu,Arial,sans-serif;
+    letter-spacing: 2px;
+}
+.right-side img{
+    width: 75%;
+    margin: 18% 10%;
+}
+
+/*-------------------------
+ Main Section Stylesheet
+------------------------- */
+main{
+    background-color:#fff;
+    margin: 40px 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+}
+h2{
+    font-size: 40px;
+    font-family: Ubuntu,Arial,sans-serif;
+    color: rgb(105, 94, 119);
+    margin: 0;
+}
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
+    background-color: rgba(187, 187, 187, 0.048);  
+    margin-top: 50px; 
+}
+.player{
+    width: 320px;
+    height: 450px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 25px rgba(78, 78, 78, 0.397);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.player .player-img img{
+    width: 100%;  
+}
+.player-info h3{
+    font-size: 28px;
+    margin: 10px 0;
+    font-family: Ubuntu,Arial,sans-serif;
+}
+.player-info p, .left-side-info p{
+    margin-top: 0;
+    color: gray;
+}
+
+
+/* Gallery Images */
+.gallery-area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.gallery{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+}
+
+.gallery-img{
+    width: 300px;
+    height: -1px;
+}
+.gallery-img img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;   
+}
+.logo-box{
+    width: 400px;
+}
+.logo-box img{
+    width: 100%;
+}
+.social-icons{
+    color: rgb(95, 94, 94);
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-top: 20px;
+}
+.last-text{
+    text-align: center;
+}
+/* Special Effects */
+.right-side{
+    overflow: hidden;
+    transition: 0.5s;
+}
+.right-side:hover{
+    z-index: 1;
+    transform: scale(1.10);
+    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+}
+.player:hover{
+    z-index: 1;
+    transform: scale(1.10);
+    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+}
+.gallery{
+    overflow: hidden;
+    transition: 0.7s;
+}
+.gallery-img:hover{
+    z-index: 1;
+    transform: scale(1.10);
+    box-shadow: 0 25px 40px rgba(0,0,0,.5);
+}
